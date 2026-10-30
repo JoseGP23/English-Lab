@@ -1,0 +1,37 @@
+name: Desplegar en Azure
+
+# Cada push a main compila la web y la sube al sitio estático de Azure Storage
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Subir a Azure Storage ($web)
+        if: env.AZURE_STORAGE_CONNECTION_STRING != ''
+        run: az storage blob upload-batch -s dist -d '$web' --overwrite --only-show-errors
+
+      - name: Falta el secreto
+        if: env.AZURE_STORAGE_CONNECTION_STRING == ''
+        run: |
+          echo "::error::Agrega el secreto AZURE_STORAGE_CONNECTION_STRING en Settings > Secrets and variables > Actions"
+          exit 1
