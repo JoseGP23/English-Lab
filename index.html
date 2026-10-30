@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>English Lab · Academia de inglés en Duitama, Boyacá</title>
+  <meta name="description" content="English Lab, academia de inglés en Duitama, Boyacá. Conversación y fluidez, inglés profesional y tech, preparación IELTS, TOEFL y Cambridge, clases VIP y bootcamps. Escríbenos por WhatsApp." />
+  <meta name="theme-color" content="#1d1d1f" />
+  <link rel="icon" href="/logo.jpg" />
+  <script>document.documentElement.classList.add('js');</script>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="English Lab · Your journey to fluency starts here" />
+  <meta property="og:description" content="Academia de inglés en Duitama, Boyacá. Conversación, inglés profesional, exámenes internacionales y clases VIP." />
+  <meta property="og:image" content="/logo.jpg" />
+  <meta property="og:locale" content="es_CO" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "English Lab",
+    "slogan": "Your journey to fluency starts here",
+    "telephone": "+57 320 305 7571",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Duitama",
+      "addressRegion": "Boyacá",
+      "addressCountry": "CO"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <!-- Fondo de color que cambia con el scroll -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-dark"></div>
+    <div class="bg-light"></div>
+    <div class="bg-grain"></div>
+  </div>
+  <!-- Progreso del recorrido -->
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <!-- Escena 3D fija -->
+  <canvas class="stage" aria-hidden="true"></canvas>
+
+  <!-- Preloader -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <svg class="preloader__rocket" viewBox="0 0 60 120">
+        <defs>
+          <clipPath id="rocket-clip">
+            <path d="M30 4 C44 22 46 46 44 78 L54 96 L54 106 L40 98 L20 98 L6 106 L6 96 L16 78 C14 46 16 22 30 4Z" />
+          </clipPath>
+        </defs>
+        <path class="preloader__outline" d="M30 4 C44 22 46 46 44 78 L54 96 L54 106 L40 98 L20 98 L6 106 L6 96 L16 78 C14 46 16 22 30 4Z" />
+        <rect class="preloader__fill" x="0" y="0" width="60" height="120" clip-path="url(#rocket-clip)" />
+      </svg>
+      <p class="preloader__count"><span>0</span>%</p>
+      <p class="preloader__label">Preparing launch…</p>
+      <button class="preloader__start" type="button">Start your journey <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+
+  <!-- Navegación -->
+  <header class="nav">
+    <a class="nav__brand" href="#inicio" aria-label="English Lab, inicio">
+      <img src="/logo.jpg" alt="" width="40" height="40" />
+      <span>English Lab</span>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#programas">Programas</a>
+      <a href="#metodo">Método</a>
+      <a href="#ruta">Ruta</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn--small" data-wa href="https://wa.me/573203057571" target="_blank" rel="noopener">WhatsApp</a>
+  </header>
+
+  <main>
+    <!-- 1. HERO -->
+    <section class="hero" id="inicio">
+      <p class="hero__kicker">Academia de inglés · Duitama, Boyacá</p>
+      <h1 class="hero__title">
+        <span class="hero__word" data-text="ENGLISH">ENGLISH</span>
+        <span class="hero__word" data-text="LAB">LAB</span>
+      </h1>
+      <img class="hero__fallback" src="/logo.jpg" alt="Logo de English Lab: cohete steampunk con el lema Your journey to fluency starts here" width="420" height="420" />
+      <div class="hero__bottom">
+        <p class="hero__slogan">Your journey to <em>fluency</em> starts here.</p>
+        <a class="btn" data-wa href="https://wa.me/573203057571" target="_blank" rel="noopener">Despega por WhatsApp</a>
+      </div>
+      <p class="hero__scroll" aria-hidden="true"><span></span>Scroll para despegar</p>
+    </section>
+
+    <!-- 2. MANIFIESTO HORIZONTAL -->
+    <section class="manifesto" aria-label="Manifiesto">
+      <div class="manifesto__track manifesto__track--back" aria-hidden="true">
+        <span>SPEAK</span><span class="dot"></span><span>THINK</span><span class="dot"></span>
+      </div>
+      <div class="manifesto__track manifesto__track--front">
+        <span>CONNECT</span><span class="dot"></span><span class="outline">FLY</span>
+      </div>
+      <p class="manifesto__copy">En English Lab no memorizas: <strong>experimentas</strong>. Cada clase es un laboratorio donde hablas, te equivocas, corriges y vuelves a despegar.</p>
+    </section>
+
+    <!-- 3. PROGRAMAS -->
+    <section class="programs" id="programas">
+      <header class="programs__head">
+        <p class="eyebrow">Nuestros programas</p>
+        <p class="programs__counter" aria-hidden="true"><span class="programs__current">01</span>–04</p>
+      </header>
+
+      <div class="programs__panels">
+        <article class="program" data-program="0">
+          <p class="program__num">01</p>
+          <h2 class="program__title">Conversación <em>y Fluidez</em></h2>
+          <p class="program__text">Práctica real para el día a día y viajes. Pierde el miedo a hablar con situaciones auténticas: pedir en un restaurante, moverte en un aeropuerto o hacer amigos en otro país.</p>
+          <ul class="tags"><li>Día a día</li><li>Viajes</li><li>Pronunciación</li></ul>
+          <a class="btn" data-wa data-msg="¡Hola English Lab! 👋 Me interesa el programa *Conversación y Fluidez*. ¿Me cuentan horarios y precios?" href="https://wa.me/573203057571" target="_blank" rel="noopener">Quiero este programa</a>
+        </article>
+
+        <article class="program" data-program="1">
+          <p class="program__num">02</p>
+          <h2 class="program__title">Inglés Profesional <em>y Tech</em></h2>
+          <p class="program__text">Negocios y preparación para entrevistas. Reuniones, correos, presentaciones y el vocabulario que piden las empresas y equipos de tecnología.</p>
+          <ul class="tags"><li>Negocios</li><li>Entrevistas</li><li>Tech</li></ul>
+          <a class="btn" data-wa data-msg="¡Hola English Lab! 👋 Me interesa el programa *Inglés Profesional y Tech*. ¿Me cuentan horarios y precios?" href="https://wa.me/573203057571" target="_blank" rel="noopener">Quiero este programa</a>
+        </article>
+
+        <article class="program" data-program="2">
+          <p class="program__num">03</p>
+          <h2 class="program__title">Preparación <em>para Exámenes</em></h2>
+          <p class="program__text">Entrenamiento tipo IELTS, TOEFL y Cambridge. Estrategia por sección, simulacros y retroalimentación para llegar con confianza al día del examen.</p>
+          <ul class="tags"><li>IELTS</li><li>TOEFL</li><li>Cambridge</li></ul>
+          <a class="btn" data-wa data-msg="¡Hola English Lab! 👋 Me interesa la *Preparación para Exámenes* (IELTS / TOEFL / Cambridge). ¿Me cuentan horarios y precios?" href="https://wa.me/573203057571" target="_blank" rel="noopener">Quiero este programa</a>
+        </article>
+
+        <article class="program" data-program="3">
+          <p class="program__num">04</p>
+          <h2 class="program__title">Clases VIP <em>y Bootcamps</em></h2>
+          <p class="program__text">Módulos 1 a 1 e intensivos a tu ritmo. Un plan hecho a tu medida, con la intensidad que tu meta necesita.</p>
+          <ul class="tags"><li>1 a 1</li><li>Intensivos</li><li>A tu ritmo</li></ul>
+          <a class="btn" data-wa data-msg="¡Hola English Lab! 👋 Me interesan las *Clases VIP y Bootcamps*. ¿Me cuentan horarios y precios?" href="https://wa.me/573203057571" target="_blank" rel="noopener">Quiero este programa</a>
+        </article>
+      </div>
+
+      <div class="programs__progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    </section>
+
+    <!-- 4. MÉTODO -->
+    <section class="method" id="metodo">
+      <div class="method__intro">
+        <p class="eyebrow">The Lab Method</p>
+        <h2 class="method__title">English you can <em>almost feel.</em></h2>
+      </div>
+      <ul class="callouts">
+        <li class="callout" style="--x:-1;--y:-1"><strong>Speaking</strong><span>Hablas desde la primera clase.</span></li>
+        <li class="callout" style="--x:1;--y:-1"><strong>Listening</strong><span>Acentos y audio real.</span></li>
+        <li class="callout" style="--x:-1;--y:0.2"><strong>Vocabulary</strong><span>Palabras que sí vas a usar.</span></li>
+        <li class="callout" style="--x:1;--y:0.2"><strong>Grammar</strong><span>Explicada en contexto, sin enredos.</span></li>
+        <li class="callout" style="--x:0;--y:1"><strong>Confidence</strong><span>El combustible de todo lo demás.</span></li>
+      </ul>
+    </section>
+
+    <!-- 5. RUTA DE VUELO -->
+    <section class="route" id="ruta">
+      <div class="route__curtain" aria-hidden="true"></div>
+      <div class="route__inner">
+        <header class="route__head">
+          <p class="eyebrow">Tu ruta de vuelo</p>
+          <h2 class="route__title">De A1 a C2, <em>una órbita a la vez.</em></h2>
+          <p class="route__lead">Te ubicamos en tu nivel según el Marco Común Europeo y trazamos contigo la trayectoria hasta tu meta.</p>
+        </header>
+        <div class="route__map">
+          <svg class="route__svg" viewBox="0 0 1000 420" preserveAspectRatio="none" aria-hidden="true">
+            <path class="route__path-bg" d="M20 390 C 180 380, 220 300, 330 280 S 520 250, 560 180 S 760 120, 820 80 S 940 30, 980 20" />
+            <path class="route__path" d="M20 390 C 180 380, 220 300, 330 280 S 520 250, 560 180 S 760 120, 820 80 S 940 30, 980 20" />
+          </svg>
+          <ol class="levels">
+            <li class="level" style="--lx:4%;--ly:88%"><b>A1</b><span>Despegue</span></li>
+            <li class="level" style="--lx:22%;--ly:72%"><b>A2</b><span>Ascenso</span></li>
+            <li class="level" style="--lx:40%;--ly:62%"><b>B1</b><span>Órbita baja</span></li>
+            <li class="level" style="--lx:58%;--ly:42%"><b>B2</b><span>Órbita alta</span></li>
+            <li class="level" style="--lx:78%;--ly:22%"><b>C1</b><span>Espacio profundo</span></li>
+            <li class="level" style="--lx:96%;--ly:6%"><b>C2</b><span>Fluidez total</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. REGLAS DEL LAB -->
+    <section class="rules" aria-label="Reglas del laboratorio">
+      <div class="rules__list">
+        <blockquote class="rule">
+          <p class="rule__no">Lab rule no. 1</p>
+          <p class="rule__text">Speak from day one.</p>
+          <p class="rule__es">Aquí se habla desde la primera clase.</p>
+        </blockquote>
+        <blockquote class="rule">
+          <p class="rule__no">Lab rule no. 2</p>
+          <p class="rule__text">Mistakes are data.</p>
+          <p class="rule__es">Cada error es un experimento que te acerca a la fluidez.</p>
+        </blockquote>
+        <blockquote class="rule">
+          <p class="rule__no">Lab rule no. 3</p>
+          <p class="rule__text">Real English, real life.</p>
+          <p class="rule__es">Aprendes el inglés que de verdad vas a usar.</p>
+        </blockquote>
+        <blockquote class="rule">
+          <p class="rule__no">Lab rule no. 4</p>
+          <p class="rule__text">Your pace, your mission.</p>
+          <p class="rule__es">Tu meta define la ruta, no al revés.</p>
+        </blockquote>
+      </div>
+      <div class="rules__dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    </section>
+
+    <!-- 7. ÓRBITA -->
+    <section class="orbit" aria-label="Lo que preparamos">
+      <p class="orbit__title">Everything orbits <em>your goal.</em></p>
+      <p class="orbit__sr">Viajes, negocios, tecnología, IELTS, TOEFL y Cambridge.</p>
+    </section>
+
+    <!-- 8. CONTACTO -->
+    <section class="cta" id="contacto">
+      <div class="cta__glow" aria-hidden="true"></div>
+      <p class="eyebrow">¿Listo para despegar?</p>
+      <h2 class="cta__title">Your journey to fluency <em>starts here.</em></h2>
+      <p class="cta__text">Inscripciones, horarios, precios y cualquier duda: todo se resuelve por WhatsApp. Escríbenos y te ayudamos a elegir tu programa.</p>
+      <a class="btn btn--big cta__launch" data-wa href="https://wa.me/573203057571" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wa" /></svg>
+        Escríbenos al 320 305 7571
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <img src="/logo.jpg" alt="" width="56" height="56" />
+      <div>
+        <p class="footer__name">English Lab</p>
+        <p>Your journey to fluency starts here.</p>
+      </div>
+    </div>
+    <div class="footer__info">
+      <p>Duitama, Boyacá, Colombia</p>
+      <p><a data-wa href="https://wa.me/573203057571" target="_blank" rel="noopener">WhatsApp +57 320 305 7571</a></p>
+      <!-- TODO: agregar enlaces reales de Instagram / Facebook / TikTok -->
+    </div>
+    <p class="footer__copy">© <span class="year">2026</span> English Lab. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="wa-float" data-wa href="https://wa.me/573203057571" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-wa" /></svg>
+  </a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="icon-wa" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.24 8.24 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29Z" />
+    </symbol>
+  </svg>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

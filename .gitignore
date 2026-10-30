@@ -1,0 +1,9 @@
+node_modules/
+dist/
+
+# Herramientas locales (skills de Claude, capturas de Playwright)
+.agents/
+.claude/skills/
+.playwright/
+.playwright-cli/
+skills-lock.json
